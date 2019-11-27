@@ -1,7 +1,7 @@
 class ResolutionsController < ApplicationController
     def index
         @resolutions = Resolution.all 
-        render json: @resolutions
+        render json: @resolutions, include: [:realm]
     end
 
     def show
