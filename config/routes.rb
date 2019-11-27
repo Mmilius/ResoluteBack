@@ -6,5 +6,6 @@ resources "resolutions"
 resources "realms"
 
 get "/user", to: "resolutions#user"
+get "/reports", to: "resolutions#reports"
 
 end

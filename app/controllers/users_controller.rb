@@ -9,5 +9,14 @@ class UsersController < ApplicationController
         render json: @user, include: [:resolutions, :reports, :realms]
     end
 
+    def create
+        @user = User.create({
+            username: params[:username],
+            password: params[:passowrd]
+    })
+    end
+
+
+
 end
 

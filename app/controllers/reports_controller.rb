@@ -9,4 +9,15 @@ class ReportsController < ApplicationController
         render json: @report
     end
 
+    def create 
+        @report = Report.create({
+            status: params[:status],
+            challenges: params[:challenges],
+            learned: params[:learned],
+            image: params[:image],
+            resolution_id: params[:resolution_id]
+        })
+    end
+
+
 end
