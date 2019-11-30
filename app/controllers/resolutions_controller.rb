@@ -19,4 +19,10 @@ class ResolutionsController < ApplicationController
         })
         redirect_to "http://localhost:8080/resolutions"
     end
+
+    def destroy
+        @resolution = Resolution.find(params[:id])
+        @resolution.destroy
+    end
+
 end
