@@ -25,4 +25,19 @@ class ResolutionsController < ApplicationController
         @resolution.destroy
     end
 
+    def update
+        @resolution = Resolution.find(params[:id])
+        if @resolution.update(resolution_params)
+            render json: @resolution
+        else
+            render json: @resolution.errors, status: :unprocessable_entity
+        end
+
+    end
+
+    def resolution_params
+        params.permit(:goal, :motivation, :image, :realm_id, :created_at, :updated_at, :id)
+    end
+
+
 end
