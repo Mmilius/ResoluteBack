@@ -35,8 +35,9 @@ class ResolutionsController < ApplicationController
 
     end
 
+    private
     def resolution_params
-        params.permit(:goal, :motivation, :image, :realm_id, :created_at, :updated_at, :id)
+        params.require(:resolution).permit(:goal, :motivation, :image, :realm_id, :created_at, :updated_at, :id, :user_id)
     end
 
 
