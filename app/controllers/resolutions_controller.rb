@@ -17,7 +17,7 @@ class ResolutionsController < ApplicationController
             user_id: params[:user_id],
             realm_id: params[:realm_id], 
         })
-        redirect_to "http://localhost:8080/resolutions"
+        render json: @resolution 
     end
 
     def destroy
