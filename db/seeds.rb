@@ -40,3 +40,5 @@ report_1 = Report.create({
     image: "https://www.pe.com/wp-content/uploads/2019/06/636337794-1.jpg?w=863",
     resolution: resolution_1
 })
+
+
